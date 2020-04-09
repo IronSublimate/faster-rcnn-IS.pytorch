@@ -24,14 +24,14 @@ for year in ['2007', '2012']:
     name = 'voc_{}_{}'.format(year, split)
     __sets[name] = (lambda split=split, year=year: pascal_voc(split, year))
 
-# Set up coco_2014_<split>
+# Set up coco_2017_<split>
 for year in ['2014']:
   for split in ['train', 'val', 'minival', 'valminusminival', 'trainval']:
     name = 'coco_{}_{}'.format(year, split)
     __sets[name] = (lambda split=split, year=year: coco(split, year))
 
-# Set up coco_2014_cap_<split>
-for year in ['2014']:
+# Set up coco_2017_cap_<split>
+for year in ['2014', '2017']:
   for split in ['train', 'val', 'capval', 'valminuscapval', 'trainval']:
     name = 'coco_{}_{}'.format(year, split)
     __sets[name] = (lambda split=split, year=year: coco(split, year))
